@@ -1,0 +1,87 @@
+Script started on 2022-11-10 17:14:15-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="55"]
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Downloads/project2_part2/Proj2p2[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Downloads/project2_part2/Proj2p2[00m$ make
+[?2004lkpl System -unsafe
+asm System.s
+kpl List -unsafe
+asm List.s
+kpl Thread -unsafe
+asm Thread.s
+asm Switch.s
+kpl Synch
+asm Synch.s
+kpl Main -unsafe
+asm Main.s
+asm Runtime.s
+lddd System.o List.o Thread.o Switch.o Synch.o Main.o Runtime.o -o os
+kpl Game -unsafe
+asm Game.s
+lddd System.o List.o Thread.o Switch.o Synch.o Runtime.o Game.o -o game
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Downloads/project2_part2/Proj2p2[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Downloads/project2_part2/Proj2p2[00m$ blitz -g os
+[?2004lBeginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Example Thread-based Programs...
+Initializing Thread Scheduler...
+        Producer-B             B
+B       Producer-B             B
+BB      Producer-B             B
+BBB     Producer-C                 C
+BBBC    Producer-D                     D
+BBBCD   Consumer-1                               |      B
+BBCD    Consumer-2                               |          B
+BCD     Consumer-3                               |              B
+CD      Producer-B             B
+CDB     Producer-C                 C
+CDBC    Producer-D                     D
+CDBCD   Consumer-1                               |      C
+DBCD    Producer-E                         E
+DBCDE   Consumer-2                               |          D
+BCDE    Producer-A         A
+BCDEA   Consumer-3                               |              B
+CDEA    Producer-B             B
+CDEAB   Consumer-1                               |      C
+DEAB    Producer-E                         E
+DEABE   Consumer-2                               |          D
+EABE    Producer-A         A
+EABEA   Consumer-3                               |              E
+ABEA    Producer-D                     D
+ABEAD   Consumer-1                               |      A
+BEAD    Producer-E                         E
+BEADE   Consumer-2                               |          B
+EADE    Consumer-3                               |              E
+ADE     Producer-D                     D
+ADED    Consumer-1                               |      A
+DED     Producer-E                         E
+DEDE    Consumer-2                               |          D
+EDE     Producer-C                 C
+EDEC    Consumer-3                               |              E
+DEC     Producer-A         A
+DECA    Producer-D                     D
+DECAD   Consumer-1                               |      D
+ECAD    Producer-E                         E
+ECADE   Consumer-2                               |          E
+CADE    Consumer-3                               |              C
+ADE     Producer-A         A
+ADEA    Consumer-1                               |      A
+DEA     Consumer-2                               |          D
+EA      Producer-C                 C
+EAC     Consumer-3                               |              E
+AC      Producer-A         A
+ACA     Consumer-1                               |      A
+CA      Producer-C                 C
+CAC     Consumer-2                               |          C
+AC      Consumer-3                               |              A
+C       Consumer-1                               |      C
+     
+*****  A 'wait' instruction was executed and no more interrupts are scheduled... halting emulation!  *****
+
+Done!  The next instruction to execute will be:
+000EC8: 09000000       ret     
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 259455
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 259455
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Downloads/project2_part2/Proj2p2[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Downloads/project2_part2/Proj2p2[00m$ exit
+[?2004lexit
+
+Script done on 2022-11-10 17:14:26-05:00 [COMMAND_EXIT_CODE="0"]

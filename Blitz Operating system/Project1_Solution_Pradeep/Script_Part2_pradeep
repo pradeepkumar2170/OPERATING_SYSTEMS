@@ -1,0 +1,80 @@
+Script started on 2022-10-02 19:09:22-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="55"]
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Proj1Files[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Proj1Files[00m$ make
+[?2004lasm Runtime.s
+lddd Runtime.o System.o HelloWorld.o -o HelloWorld
+lddd Runtime.o System.o EchoPrime.o -o EchoPrime
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Proj1Files[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Proj1Files[00m$ make
+[?2004lkpl EchoPrime
+asm EchoPrime.s
+lddd Runtime.o System.o EchoPrime.o -o EchoPrime
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Proj1Files[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Proj1Files[00m$ blitz -g EchoPrime
+[?2004lBeginning execution...
+====================  KPL PROGRAM STARTING  ====================
+this
+this
+is
+is
+test
+test
+hello
+hello
+crock quet
+crocquet
+question
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+                   _Label_11:
+0027F4: 8C1EFFF6       loadb   [r14+0xFFF6],r1	! decimal: -10
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> st
+   Function/Method            Frame Addr   Execution at...
+   ========================   ==========   =====================
+   KeyInput                    00FFFEE8    EchoPrime.k, line 13
+   main                        00FFFEF8    EchoPrime.k, line 5
+Bottom of activation frame stack!
+> fr
+=====  Frame number 0 (where StackTop = 0)  =====
+Function Name:    KeyInput
+Filename:         EchoPrime.k
+Execution now at: line 13
+Frame Addr:       00FFFEE8
+frameSize:        8
+totalParmSize:    0
+                         ==========
+   sp--> -16   00FFFED8:  71000000
+         -12   00FFFEDC:  00007100
+R.D.ptr:  -8   00FFFEE0:  0000282C
+    r13:  -4   00FFFEE4:  00000005
+     fp:   0   00FFFEE8:  00FFFEF8
+RetAddr:   4   00FFFEEC:  0000274C
+                         ==========
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  _temp_12: char
+          -9   00FFFEDC:  ------00    value = '\0'
+  input: char
+         -10   00FFFEDC:  ----71--    value = 'q'
+=================================================
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 476020107
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 476020107
+[?2004h]0;pradeep@pradeep-VirtualBox: ~/Proj1Files[01;32mpradeep@pradeep-VirtualBox[00m:[01;34m~/Proj1Files[00m$ s[Kexit
+[?2004lexit
+
+Script done on 2022-10-02 19:11:16-04:00 [COMMAND_EXIT_CODE="0"]
